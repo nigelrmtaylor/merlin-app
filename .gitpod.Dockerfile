@@ -47,5 +47,12 @@ RUN git clone https://github.com/blendle/kns.git && \
 #    kubectl krew install get-all && \
 #    kubectl krew install ingress-nginx
 
+#
+# install doctl
+#
+RUN wget https://github.com/digitalocean/doctl/releases/download/v1.94.0/doctl-1.94.0-linux-amd64.tar.gz && \
+    tar xf doctl-1.94.0-linux-amd64.tar.gz && \
+    sudo mv doctl /usr/local/bin
+
 # Add aliases
 RUN echo 'alias k="kubectl"' >> /home/gitpod/.bashrc
