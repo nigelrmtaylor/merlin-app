@@ -12,5 +12,9 @@ image:
   file: .gitpod.Dockerfile
 
 tasks:
+  - name: authorise doctl
+    command: doctl auth init -t $DO_TOKEN
+    
   - name: Set the Kubernetes context
     command: echo $K8S_CTX | base64 -d > ~/.kube/config
+
