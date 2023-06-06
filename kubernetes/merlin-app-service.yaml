@@ -5,9 +5,9 @@ metadata:
   name: merlin-app-service
 spec:
   type:
-    LoadBalancer
+    ClusterIP
   selector:
-    app.kubernetes.io/name: Merlin
+    app: merlin
   ports:
     - protocol: TCP
       port: 80
