@@ -1,0 +1,13 @@
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: merlin-app-service
+spec:
+  selector:
+    app.kubernetes.io/name: Merlin
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 3000
+

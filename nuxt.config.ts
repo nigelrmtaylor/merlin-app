@@ -10,11 +10,15 @@ const url = "https://vuetify3nuxt3starter.behonbaker.com/";
 
 // https://v3.nuxtjs.org/api/configuration/nuxt.config
 export default defineNuxtConfig({
+  telemetry: false,
   // import styles
   css: ["@/assets/main.scss"],
   // enable takeover mode
   typescript: { shim: false },
   build: { transpile: ["vuetify"] },
+
+ 
+
   modules: [
     "@kevinmarrec/nuxt-pwa",
     async (options, nuxt) => {

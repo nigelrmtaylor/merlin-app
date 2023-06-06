@@ -5,7 +5,7 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "reset": "rm -rf .nuxt node_modules .output package-lock.json && npm install",
-    "preview": "nuxt preview",
+    "preview": "nuxt preview --port 80",
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {

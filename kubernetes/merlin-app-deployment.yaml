@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: merlin-app-deployment
+  labels:
+    app: merlin
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: merlin
+  template:
+    metadata:
+      labels:
+        app: merlin
+    spec:
+      containers:
+      - name: merlin
+        image: nigelrmtaylor/merlin-app:main
+        ports:
+        - containerPort: 3000
