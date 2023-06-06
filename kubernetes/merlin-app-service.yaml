@@ -4,6 +4,8 @@ kind: Service
 metadata:
   name: merlin-app-service
 spec:
+  type:
+    LoadBalancer
   selector:
     app.kubernetes.io/name: Merlin
   ports:
